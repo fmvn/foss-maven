@@ -592,6 +592,9 @@ public class FossRepositorySystem
                                 .setDependencyNode(request.getDependencyNode())
                                 .setTrace(request.getTrace());
 
+                // setDependencyNode will override the artifact
+                alternateRequest.setArtifact(alternateArtifact);
+
                 final ArtifactResult result = artifactResolver.resolveArtifact(
                         session, alternateRequest);
 

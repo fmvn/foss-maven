@@ -477,7 +477,7 @@ public class FossRepositorySystem
                         dependencyCollector.collectDependencies(session,
                                 alternateRequest);
 
-                logger.warn("collectDependencies: result = " + result);
+                logger.debug("collectDependencies: result = " + result);
                 if (result.getExceptions().isEmpty()) {
                     return result;
                 }
